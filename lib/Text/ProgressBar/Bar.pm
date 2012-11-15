@@ -1,6 +1,6 @@
 package Text::ProgressBar::Bar;
 use Moose; 
-our $VERSION = '0.1';
+our $VERSION = '0.2';
 use Text::ProgressBar;
 
 with 'Text::ProgressBar::WidgetHFill';
@@ -38,11 +38,11 @@ __END__
  
 =head1 NAME
  
-Text::ProgressBar::Bar
+Text::ProgressBar::Bar - progress bar which stretches to fill the line
  
 =head1 VERSION
  
-version 0.1
+version 0.2
  
 =head1 SYNOPSIS
 
@@ -58,7 +58,11 @@ version 0.1
     
 =head1 DESCRIPTION
  
-A progress bar which stretches to fill the line
+A progress bar which stretches to fill the line. The drawing ascii
+characters can be changed during calling class constructor or by calling
+the corresponding methods. Example of defalut output
+
+    |#######              |
 
 =head1 ATTRIBUTES
  

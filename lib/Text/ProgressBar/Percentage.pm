@@ -1,6 +1,6 @@
 package Text::ProgressBar::Percentage;
 use Moose; 
-our $VERSION = '0.1';
+our $VERSION = '0.2';
 use Text::ProgressBar;
 
 with 'Text::ProgressBar::Widget';
@@ -19,11 +19,12 @@ __END__
  
 =head1 NAME
  
-Text::ProgressBar::Percentage
+Text::ProgressBar::Percentage - displays percentage as a number with a
+percent sign
  
 =head1 VERSION
  
-version 0.1
+version 0.2
  
 =head1 SYNOPSIS
 

@@ -1,6 +1,6 @@
 package Text::ProgressBar::SimpleProgress;
 use Moose; 
-our $VERSION = '0.1';
+our $VERSION = '0.2';
 use Text::ProgressBar;
 
 with 'Text::ProgressBar::Widget';
@@ -21,11 +21,12 @@ __END__
  
 =head1 NAME
  
-Text::ProgressBar::SimpleProgress
+Text::ProgressBar::SimpleProgress - displays count of the total
+done jobs
  
 =head1 VERSION
  
-version 0.1
+version 0.2
  
 =head1 SYNOPSIS
 

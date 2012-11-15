@@ -1,6 +1,6 @@
 package Text::ProgressBar::FileTransferSpeed;
 use Moose;
-our $VERSION = '0.1';
+our $VERSION = '0.2';
 use Text::ProgressBar;
 
 with 'Text::ProgressBar::Widget';
@@ -30,11 +30,12 @@ __END__
  
 =head1 NAME
  
-Text::ProgressBar::FileTransferSpeed
+Text::ProgressBar::FileTransferSpeed - showing the transfer speed as a
+simple string
  
 =head1 VERSION
  
-version 0.1
+version 0.2
  
 =head1 SYNOPSIS
 
@@ -49,7 +50,10 @@ version 0.1
 
 =head1 DESCRIPTION
  
-Widget for showing the transfer speed (useful for file transfers)
+Widget for showing the transfer speed (useful for file transfers).
+Example of default output:
+
+      5.00 MB/s 
 
 =head1 ATTRIBUTES
  

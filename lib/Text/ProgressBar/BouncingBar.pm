@@ -1,6 +1,6 @@
 package Text::ProgressBar::BouncingBar;
 use Moose; 
-our $VERSION = '0.1';
+our $VERSION = '0.2';
 use Text::ProgressBar;
 
 extends 'Text::ProgressBar::Bar';
@@ -29,17 +29,18 @@ __END__
  
 =head1 NAME
  
-Text::ProgressBar::BouncingBar
+Text::ProgressBar::BouncingBar - a short section of bar bounces from
+left to right and back
  
 =head1 VERSION
  
-version 0.1
+version 0.2
  
 =head1 SYNOPSIS
 
     use Text::ProgressBar::BouncingBar;
 
-    my $prevbar = Text::ProgressBar->new(maxval => 300, widgets  => [Text::ProgressBar::Percentage->new(), Text::ProgressBar::ReverseBar->new()]);
+    my $prevbar = Text::ProgressBar->new(maxval => 300, widgets  => [Text::ProgressBar::Percentage->new(), Text::ProgressBar::BouncingBar->new()]);
     $prevbar->start();
     for my $i (1..300) {
         sleep 0.01;
@@ -49,8 +50,16 @@ version 0.1
 
 =head1 DESCRIPTION
  
+A short section of bar bounces from left to right and back
+indicating that the program is busy but not indicating how much
+progress has been made.
+
 Updates the progress bar and its subcomponents. It inherites all
-attribute of 'Bar'.
+attribute of 'Bar'. The drawing ascii characters can be changed during
+calling class constructor or by calling the corresponding methods.
+Example of defalut output
+
+    |            #        |
 
 =head1 METHODS
 

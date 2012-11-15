@@ -1,5 +1,5 @@
 package Text::ProgressBar;
-our $VERSION = '0.1';
+our $VERSION = '0.2';
 
 $|++; # disable buffering on STDOUT - autoflush
 use Moose;
@@ -31,7 +31,7 @@ sub BUILD {
     $self->setup_signal();
 }
 
-sub setup_signal {
+sub setup_signal { # signal handler for WINCH (window change)
     my $self = shift; 
     $SIG{WINCH} = sub { $self->term_width( $self->_handle_resize ) };
 }
@@ -119,11 +119,12 @@ __END__
 
 =head1 NAME
 
-Text::ProgressBar - indicates the progress of a lengthy operation visually
+Text::ProgressBar - indicates the progress of a lengthy operation
+visually on your terminal
 
 =head1 VERSION
 
-Version 0.1
+Version 0.2
 
 =head1 SYNOPSIS
 
@@ -140,11 +141,31 @@ Version 0.1
 =head1 DESCRIPTION
 
 The ProgressBar is customizable, you can specify different kinds of
-widgets so as you can create your own widget.
+widgets so as you can create your own widget. Each 'widget' draws a
+different text on the screen. For an example for each 'widget' see its
+class POD!
 
 When implementing your own widget, you create an I<update> method and
 pass a reference current object of ProgressBar to it. As a result, you
 have access to the ProgressBar methods and attributes.
+
+Following 'widgets' (class inheritance structure illustrated) are
+currently implemented. They can be used or extended or a new widgets can
+be created similar to them.
+
+    Widget
+    |-- AnimatedMarker
+    |-- Counter
+    |-- FileTransferSpeed
+    |-- Percentage
+    |-- SimpleProgress
+    |-- Timer
+    |   |-- ETA
+    |   `-- FormatLabel
+    `-- WidgetHFill
+        `-- Bar
+            |-- BouncingBar
+            `-- ReverseBar
 
 Useful methods and attributes include (Public API):
 
@@ -164,7 +185,7 @@ terminal width, otherwise actual terminal length will be get from system
 =item * seconds_elapsed: seconds elapsed since start_time and last
 call to update
 
-=item * percentage(): progress in percent [0..100]
+=item * percentage: progress in percent [0..100]
 
 =back
 

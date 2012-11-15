@@ -1,6 +1,6 @@
 package Text::ProgressBar::FormatLabel;
 use Moose; 
-our $VERSION = '0.1';
+our $VERSION = '0.2';
 use Text::ProgressBar;
 
 extends 'Text::ProgressBar::Timer';
@@ -30,11 +30,11 @@ __END__
  
 =head1 NAME
  
-Text::ProgressBar::FormatLabel
+Text::ProgressBar::FormatLabel - displays a formated label
  
 =head1 VERSION
  
-version 0.1
+version 0.2
  
 =head1 SYNOPSIS
 
@@ -50,7 +50,10 @@ version 0.1
     
 =head1 DESCRIPTION
  
-Displays a formatted label
+Displays a formatted label. It inherites attribute of 'Timer'. Output of
+above example:
+
+    Processed: 19 lines (in: 3 seconds)                                                                                    
 
 =head1 METHODS
 

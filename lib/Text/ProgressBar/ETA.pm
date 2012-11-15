@@ -1,6 +1,6 @@
 package Text::ProgressBar::ETA;
 use Moose; 
-our $VERSION = '0.1';
+our $VERSION = '0.2';
 use Text::ProgressBar;
 
 extends 'Text::ProgressBar::Timer';
@@ -28,11 +28,11 @@ __END__
  
 =head1 NAME
  
-Text::ProgressBar::ETA
+Text::ProgressBar::ETA - Estimated Time for Accomplishment
  
 =head1 VERSION
  
-version 0.1
+version 0.2
  
 =head1 SYNOPSIS
 
@@ -48,7 +48,10 @@ version 0.1
 
 =head1 DESCRIPTION
  
-Widget which attempts to estimate the time of arrival. It inhertes attribute of 'Timer'.
+Widget which attempts to estimate the time of accomplishment. It
+inherites attribute of 'Timer'. Example of defalut output:
+
+    ETA:  0:0:14  
 
 =head1 METHODS
 

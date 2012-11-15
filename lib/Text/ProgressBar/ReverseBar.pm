@@ -1,6 +1,6 @@
 package Text::ProgressBar::ReverseBar;
 use Moose; 
-our $VERSION = '0.1';
+our $VERSION = '0.2';
 use Text::ProgressBar;
 
 extends 'Text::ProgressBar::Bar';
@@ -18,11 +18,12 @@ __END__
  
 =head1 NAME
  
-Text::ProgressBar::ReverseBar
+Text::ProgressBar::ReverseBar - progress bar which stretches to fill the
+line in reverse order
  
 =head1 VERSION
  
-version 0.1
+version 0.2
  
 =head1 SYNOPSIS
 
@@ -40,6 +41,12 @@ version 0.1
  
 A progress bar which stretches to fill the line but from right to left.
 It inherits all attributes of 'Bar' and can extend them.
+
+The drawing ascii characters can be changed during calling class
+constructor or by calling the corresponding methods. Example of
+defalut output
+
+    |          #######|
 
 =head1 METHODS
 

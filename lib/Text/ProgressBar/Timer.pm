@@ -1,6 +1,6 @@
 package Text::ProgressBar::Timer;
 use Moose; 
-our $VERSION = '0.1';
+our $VERSION = '0.2';
 use Text::ProgressBar;
 
 with 'Text::ProgressBar::Widget';
@@ -37,11 +37,11 @@ __END__
  
 =head1 NAME
  
-Text::ProgressBar:::Timer
+Text::ProgressBar:::Timer - displays elapsed time
  
 =head1 VERSION
  
-version 0.1
+version 0.2
  
 =head1 SYNOPSIS
  
@@ -57,7 +57,10 @@ version 0.1
     
 =head1 DESCRIPTION
  
-Widget which displays the elapsed seconds
+Widget which displays the elapsed seconds. It is super class of 'ETA'
+and 'FormatLabel'. An example of default settings:
+
+    Elapsed Time: 0:0:8                                                                                                    
 
 =head1 ATTRIBUTES
  

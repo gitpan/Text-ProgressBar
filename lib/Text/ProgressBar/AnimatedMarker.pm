@@ -1,6 +1,6 @@
 package Text::ProgressBar::AnimatedMarker;
 use Moose; 
-our $VERSION = '0.1';
+our $VERSION = '0.2';
 use Text::ProgressBar;
 
 with 'Text::ProgressBar::Widget';
@@ -25,11 +25,11 @@ __END__
  
 =head1 NAME
  
-Text::ProgressBar:::AnimatedMarker
+Text::ProgressBar:::AnimatedMarker - a rotating wheel on screen
  
 =head1 VERSION
  
-version 0.1
+version 0.2
  
 =head1 SYNOPSIS
  
@@ -46,7 +46,8 @@ version 0.1
 =head1 DESCRIPTION
  
 An animated marker for the progress bar which defaults to appear as if
-it were rotating.
+it were rotating, indicating that the program is busy but not indicating
+how much progress has been made.
 
 =head1 ATTRIBUTES
  

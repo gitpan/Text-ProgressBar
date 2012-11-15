@@ -1,5 +1,5 @@
 ---
-abstract: 'indicates the progress of a lengthy operation visually'
+abstract: 'indicates the progress of a lengthy operation'
 author:
   - 'Farhad Fouladi <farhad@cpan.org>'
 build_requires:
@@ -23,4 +23,4 @@ requires:
   Moose::Role: 0
   Term::ReadKey: 0
   Test::More: 0
-version: 0.1
+version: 0.2

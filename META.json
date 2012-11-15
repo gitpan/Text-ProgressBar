@@ -1,5 +1,5 @@
 {
-   "abstract" : "indicates the progress of a lengthy operation visually",
+   "abstract" : "indicates the progress of a lengthy operation",
    "author" : [
       "Farhad Fouladi <farhad@cpan.org>"
    ],
@@ -41,5 +41,5 @@
       }
    },
    "release_status" : "stable",
-   "version" : "0.1"
+   "version" : "0.2"
 }

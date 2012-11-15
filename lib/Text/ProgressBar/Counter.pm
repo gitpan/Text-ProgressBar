@@ -1,6 +1,6 @@
 package Text::ProgressBar::Counter;
 use Moose; 
-our $VERSION = '0.1';
+our $VERSION = '0.2';
 use Text::ProgressBar;
 
 with 'Text::ProgressBar::Widget';
@@ -21,11 +21,11 @@ __END__
  
 =head1 NAME
  
-Text::ProgressBar::Counter
+Text::ProgressBar::Counter - displays the current count
  
 =head1 VERSION
  
-version 0.1
+version 0.2
  
 =head1 SYNOPSIS
 
@@ -41,7 +41,7 @@ version 0.1
 
 =head1 DESCRIPTION
  
-Displays the current count
+Displays the current count. It runs from 1 to max number successively.
 
 =head1 ATTRIBUTES
  
