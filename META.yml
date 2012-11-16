@@ -23,4 +23,4 @@ requires:
   Moose::Role: 0
   Term::ReadKey: 0
   Test::More: 0
-version: 0.2
+version: 0.3

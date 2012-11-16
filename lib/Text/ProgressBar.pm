@@ -1,5 +1,5 @@
 package Text::ProgressBar;
-our $VERSION = '0.2';
+our $VERSION = '0.3';
 
 $|++; # disable buffering on STDOUT - autoflush
 use Moose;
@@ -124,7 +124,7 @@ visually on your terminal
 
 =head1 VERSION
 
-Version 0.2
+Version 0.3
 
 =head1 SYNOPSIS
 
@@ -140,10 +140,17 @@ Version 0.2
 
 =head1 DESCRIPTION
 
-The ProgressBar is customizable, you can specify different kinds of
-widgets so as you can create your own widget. Each 'widget' draws a
-different text on the screen. For an example for each 'widget' see its
-class POD!
+The Text::ProgressBar is customizable, you can specify different kinds of
+widgets so as you can create your own widget. It is also possible that
+you combine more than one widget to find your own style.
+
+The printing (output ascii) characters can also be modified and changed.
+A default set is defined for each widget, but user can change them
+during calling constructor or later by calling the corresponding methods
+(see individual widget).
+
+Each 'widget' draws a different text on the screen. For an example for
+each 'widget' see its class POD!
 
 When implementing your own widget, you create an I<update> method and
 pass a reference current object of ProgressBar to it. As a result, you
@@ -277,31 +284,27 @@ L<http://search.cpan.org/dist/Text-ProgressBar/>
 
 =head1 ACKNOWLEDGEMENTS
 
-'Nilton Volpato' for original Python module
-
-=head1 BACKGROUND
-
-I had implemented in Python before I began with Perl. As I started with
-Perl and later with Moose, I drew on my old habits and translated some
-of them to Perl. For example ideas of this module I borrowed
-'shamelessly' from 'python- progressbar'.
-
-There are many 'ProgressBar' in CPAN written in Perl. But only this
-module use 'Moose' as its OO-Vehicle.
+'Nilton Volpato' for original idea
 
 =head1 SEE ALSO
 
-Some of the finest:
+There are many 'ProgressBar' in CPAN written in Perl. But only through this
+module user can choose from a set of different 'widgets' in different
+forms and behaviours and addititionally combine these widgets to make a
+nicer output.
 
-L<Smart::Comments> - For more helpful comments during debugging. But it's a source filter. 
- 
-L<Term::ProgressBar> - a progress bar on the terminal
+There are currently a good number of widgets, you can put them in any
+type in any order, but you can write your own widget. A new user-defined
+widget can be easily implemented. Herefor user can add a new subclass of
+existing widgets and add his own widget with new functionalities in it.
 
-L<Term::Spinner> - A progress spinner for commandline programs
+This module support resizing of terminal during execution, not all other
+'ProgressBar' module support that.
 
-L<String::ProgressBar> - Produces a simple progress bar
+Some of the other modules:
 
-L<ProgressBar::Stack> - creates a framework for adding progress bars to processes
+L<Smart::Comments>, L<Term::ProgressBar>, L<Term::Spinner>,
+L<String::ProgressBar>, L<ProgressBar::Stack>
  
 =cut
 
